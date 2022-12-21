@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>10</LangVersion>
+        <IsPackable>true</IsPackable>
+        <RepositoryUrl>https://github.com/claasd/ngpsql.aad.git</RepositoryUrl>
+        <Authors>claasd</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Description>Extension for Npgsql that adds AAD authentication using the PeriodicPasswordProvider</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Azure.Core" Version="1.26.0" />
+      <PackageReference Include="Npgsql" Version="7.0.1" />
+    </ItemGroup>
+
+</Project>

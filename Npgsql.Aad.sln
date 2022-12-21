@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Npgsql.AadExtensions", "Npgsql.AadExtensions\Npgsql.AadExtensions.csproj", "{47212625-8171-48BE-851E-CA192905F972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{777E7E03-8250-4D67-935F-5B9CB84F928F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47212625-8171-48BE-851E-CA192905F972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47212625-8171-48BE-851E-CA192905F972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47212625-8171-48BE-851E-CA192905F972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47212625-8171-48BE-851E-CA192905F972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777E7E03-8250-4D67-935F-5B9CB84F928F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777E7E03-8250-4D67-935F-5B9CB84F928F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777E7E03-8250-4D67-935F-5B9CB84F928F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777E7E03-8250-4D67-935F-5B9CB84F928F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

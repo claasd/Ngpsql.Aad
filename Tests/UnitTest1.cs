@@ -1,8 +1,8 @@
 using Azure.Core;
+using CdIts.Npgsql.AadExtensions;
 using FluentAssertions;
 using Moq;
 using Npgsql;
-using Npgsql.AadExtensions;
 
 namespace Tests;
 

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Npgsql.AadExtensions", "Npgsql.AadExtensions\Npgsql.AadExtensions.csproj", "{47212625-8171-48BE-851E-CA192905F972}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CdIts.Npgsql.AadExtensions", "CdIts.Npgsql.AadExtensions\CdIts.Npgsql.AadExtensions.csproj", "{47212625-8171-48BE-851E-CA192905F972}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{777E7E03-8250-4D67-935F-5B9CB84F928F}"
 EndProject

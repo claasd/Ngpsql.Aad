@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Npgsql.AadExtensions\Npgsql.AadExtensions.csproj" />
+      <ProjectReference Include="..\CdIts.Npgsql.AadExtensions\CdIts.Npgsql.AadExtensions.csproj" />
     </ItemGroup>
 
 </Project>

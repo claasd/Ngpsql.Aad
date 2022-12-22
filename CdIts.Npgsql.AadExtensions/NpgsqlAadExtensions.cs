@@ -26,7 +26,7 @@ public static class NpgsqlAadExtensions
 
     public static Task<bool> UseAadUserFromTokenAsync(this NpgsqlDataSourceBuilder mapper, TokenCredential credential,
         string tenantId = null) =>
-        mapper.UseAadUserFromTokenAsync(credential, new[] { "unique_name", "upn", "appid", "oid" }, tenantId);
+        mapper.UseAadUserFromTokenAsync(credential, new[] { "unique_name", "upn", "oid", "sub" }, tenantId);
 
     public static async Task<bool> UseAadUserFromTokenAsync(this NpgsqlDataSourceBuilder mapper,
         TokenCredential credential,

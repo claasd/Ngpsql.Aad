@@ -13,6 +13,7 @@
     <ItemGroup>
       <PackageReference Include="Azure.Core" Version="1.26.0" />
       <PackageReference Include="Npgsql" Version="7.0.1" />
+      <PackageReference Include="System.Text.Json" Version="7.0.1" />
     </ItemGroup>
 
 </Project>

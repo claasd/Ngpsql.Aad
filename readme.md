@@ -9,6 +9,8 @@ You shuld be familiar with how AAD authentication for Azure Database for Postgre
 This extension uses a given `TokenCredential` to create, provide and rotate a access token for Azure Database for PostgreSQL.
 
 ## Usage
+Install the Extension [CdIts.Npgsql.AadExtensions](https://www.nuget.org/packages/CdIts.Npgsql.AadExtensions) via nuget
+
 
 Use the `NpgsqlDataSourceBuilder` to register the extension:
 
@@ -31,7 +33,7 @@ builder.Build();
 
 You can pass an optional `tenantId`:
 ```csharp
-builder.UseAadPasswordProvider(credential, subscriptionId);
+builder.UseAadPasswordProvider(credential, tenantId);
 ```
 
 ## License

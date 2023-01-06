@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
@@ -32,19 +34,14 @@ public static class NpgsqlAadExtensions
         TokenCredential credential,
         IEnumerable<string> claimsToUse, string tenantId = null)
     {
-        var token = await credential.GetPgTokenAsync(tenantId);
-        var parts = token.Token.Split('.');
-        var base64String = parts[1].Replace('-', '+').Replace('_', '/');
-        while (base64String.Length % 3 > 0)
-            base64String += '=';
-        var base64 = Convert.FromBase64String(base64String);
-        var content = Encoding.UTF8.GetString(base64);
-        var payload = JsonSerializer.Deserialize<Dictionary<string, object>>(content);
-        foreach (var claim in claimsToUse)
+        var accessToken = await credential.GetPgTokenAsync(tenantId);
+        var token = new JwtSecurityToken(accessToken.Token);
+        foreach (var claimName in claimsToUse)
         {
-            if (!payload!.TryGetValue(claim, out var value) || string.IsNullOrEmpty(value.ToString()))
+            var value = token.Claims.FirstOrDefault(claim => claim.Type == claimName)?.Value;
+            if(string.IsNullOrEmpty(value))
                 continue;
-            mapper.ConnectionStringBuilder.Username = value.ToString();
+            mapper.ConnectionStringBuilder.Username = value;
             return true;
         }
 

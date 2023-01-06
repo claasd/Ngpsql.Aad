@@ -23,6 +23,8 @@ builder.Build();
 
 If you need to extract the user from the AccessToken (e.g. the object-id of a managed-identity), you can use `UseAadUserFromToken` or `UseAadUserFromTokenAsync`. This will overwrite `builder.ConnectionStringBuilder.Username`. 
 
+> 💡 When using this in a function, you may need to add `<_FunctionsSkipCleanOutput>true<_FunctionsSkipCleanOutput>`. [Link for explanation](https://github.com/Azure/azure-functions-vs-build-sdk/issues/397)
+
 ```csharp
 var credential = new DefaultAzureCredential();
 var builder = new NpgsqlDataSourceBuilder();

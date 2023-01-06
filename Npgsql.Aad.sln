@@ -4,6 +4,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CdIts.Npgsql.AadExtensions"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{777E7E03-8250-4D67-935F-5B9CB84F928F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutionItems", "solutionItems", "{269EC57C-2B2C-4E2B-9E45-39358CD43B22}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "actions", "actions", "{30C65153-6007-4167-90E1-43B8FEBB2C06}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\publish.yml = .github\workflows\publish.yml
+		.github\workflows\build.yml = .github\workflows\build.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +31,8 @@ Global
 		{777E7E03-8250-4D67-935F-5B9CB84F928F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{777E7E03-8250-4D67-935F-5B9CB84F928F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{777E7E03-8250-4D67-935F-5B9CB84F928F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{30C65153-6007-4167-90E1-43B8FEBB2C06} = {269EC57C-2B2C-4E2B-9E45-39358CD43B22}
 	EndGlobalSection
 EndGlobal

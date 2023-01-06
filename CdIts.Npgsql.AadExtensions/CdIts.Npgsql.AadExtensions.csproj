@@ -13,5 +13,6 @@
     <ItemGroup>
       <PackageReference Include="Azure.Core" Version="1.26.0" />
       <PackageReference Include="Npgsql" Version="7.0.1" />
+      <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.1" />
     </ItemGroup>
 </Project>

@@ -18,18 +18,14 @@ jobs:
           git log --pretty=format:'%d %s' ${GITHUB_REF} | perl -pe 's| \(.*tag: v(\d+.\d+.\d+(-preview\d{3})?)(, .*?)*\)|\n## \1\n|g' > RELEASE-NOTES
       - name: Set VERSION variable from tag
         run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
-      - name: Setup .NET Core SDK 6.0.x
+      - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3.0.3
         with:
-          dotnet-version: 7.0.x
+          dotnet-version: 8.0.x
       - name: Build
         run: dotnet build --configuration Release /p:Version=${VERSION}
       - name: Pack
         run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
-      - name: Push to GitHub
-        run: dotnet nuget push *.nupkg --source https://nuget.pkg.github.com/claasd/index.json --api-key "${GITHUB_TOKEN}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_REPO_ACCESS_TOKEN }}
       - name: Push to Nuget.org
         run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key "${GITHUB_TOKEN}"
         env:
